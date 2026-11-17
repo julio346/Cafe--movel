@@ -479,3 +479,42 @@ video.espelhado {
 .busca:focus {
   outline: 2px solid var(--cor-principal, #6f4e37);
 }
+
+/* ==========================================================
+   Dia 6: modo escuro automático
+   Quando o celular está no modo escuro, redefinimos as variáveis.
+   ========================================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #1c1510;
+    --cor-card: #2a2018;
+    --cor-texto: #f3e9df;
+    --cor-texto-suave: #b9a898;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .abas {
+    background: var(--cor-card);
+    border-top-color: #43342a;
+  }
+
+  .filtro,
+  .btn-qtd,
+  .aba.ativa {
+    color: var(--cor-destaque);
+  }
+
+  .filtro.ativo {
+    color: #fff;
+  }
+
+  .btn-qtd {
+    background: var(--cor-card);
+    border-color: var(--cor-destaque);
+  }
+
+  .busca {
+    border-color: #43342a;
+    color: var(--cor-texto);
+  }
+}
